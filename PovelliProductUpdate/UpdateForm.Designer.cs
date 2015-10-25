@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.sendBtn = new System.Windows.Forms.Button();
             this.privateKey = new System.Windows.Forms.TextBox();
             this.publicKey = new System.Windows.Forms.TextBox();
             this.storeID = new System.Windows.Forms.TextBox();
@@ -44,15 +44,15 @@
             this.apiResponse = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // sendBtn
             // 
-            this.button1.Location = new System.Drawing.Point(15, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.sendBtn.Location = new System.Drawing.Point(15, 243);
+            this.sendBtn.Name = "sendBtn";
+            this.sendBtn.Size = new System.Drawing.Size(75, 23);
+            this.sendBtn.TabIndex = 3;
+            this.sendBtn.Text = "Send";
+            this.sendBtn.UseVisualStyleBackColor = true;
+            this.sendBtn.Click += new System.EventHandler(this.sendBtn_Click);
             // 
             // privateKey
             // 
@@ -60,6 +60,7 @@
             this.privateKey.Name = "privateKey";
             this.privateKey.Size = new System.Drawing.Size(280, 20);
             this.privateKey.TabIndex = 1;
+            this.privateKey.TabStop = false;
             this.privateKey.Text = "e37dee6f43e1fb43c728bf7794fcc08f8c34463c";
             // 
             // publicKey
@@ -68,6 +69,7 @@
             this.publicKey.Name = "publicKey";
             this.publicKey.Size = new System.Drawing.Size(280, 20);
             this.publicKey.TabIndex = 2;
+            this.publicKey.TabStop = false;
             this.publicKey.Text = "b21305e7a8354f989fed1bf25d719264";
             // 
             // storeID
@@ -76,6 +78,7 @@
             this.storeID.Name = "storeID";
             this.storeID.Size = new System.Drawing.Size(100, 20);
             this.storeID.TabIndex = 3;
+            this.storeID.TabStop = false;
             this.storeID.Text = "8";
             // 
             // UPC
@@ -83,22 +86,21 @@
             this.UPC.Location = new System.Drawing.Point(114, 151);
             this.UPC.Name = "UPC";
             this.UPC.Size = new System.Drawing.Size(145, 20);
-            this.UPC.TabIndex = 4;
-            this.UPC.Text = "080200561009";
+            this.UPC.TabIndex = 0;
             // 
             // productTitle
             // 
             this.productTitle.Location = new System.Drawing.Point(114, 178);
             this.productTitle.Name = "productTitle";
             this.productTitle.Size = new System.Drawing.Size(280, 20);
-            this.productTitle.TabIndex = 5;
+            this.productTitle.TabIndex = 1;
             // 
             // productPrice
             // 
             this.productPrice.Location = new System.Drawing.Point(114, 205);
             this.productPrice.Name = "productPrice";
             this.productPrice.Size = new System.Drawing.Size(55, 20);
-            this.productPrice.TabIndex = 6;
+            this.productPrice.TabIndex = 2;
             // 
             // label1
             // 
@@ -180,7 +182,7 @@
             this.Controls.Add(this.storeID);
             this.Controls.Add(this.publicKey);
             this.Controls.Add(this.privateKey);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.sendBtn);
             this.Name = "UpdateForm";
             this.Text = "Povelli Product Update";
             this.ResumeLayout(false);
@@ -190,7 +192,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sendBtn;
         private System.Windows.Forms.TextBox privateKey;
         private System.Windows.Forms.TextBox publicKey;
         private System.Windows.Forms.TextBox storeID;

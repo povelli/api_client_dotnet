@@ -17,8 +17,16 @@ namespace PovelliProductUpdate
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void sendBtn_Click(object sender, EventArgs e)
         {
+            if (UPC.Text == "")
+            {
+                apiResponse.Text = "No UPC!";
+                return;
+            }
+
+            apiResponse.Text = "Sending...";
+
             PovelliAPIHelper apiHelper = new PovelliAPIHelper();
 
             PovelliProduct[] products = new PovelliProduct[1];
@@ -26,8 +34,8 @@ namespace PovelliProductUpdate
             products[0].store_id = int.Parse(storeID.Text);
             products[0].code = UPC.Text;
             products[0].name = productTitle.Text;
-            products[0].size = "1ct";
-            products[0].family = "";
+            products[0].size = ""; // Size Indicator. Eg. "1 oz."
+            products[0].family = ""; // Category or Department
             products[0].manufacturer = "";
             
             try {
