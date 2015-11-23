@@ -77,7 +77,7 @@ namespace Povelli
     }
 
     [DataContract]
-    class PovelliProductStatus : PovelliProduct
+    class PovelliProductStatus : PovelliProductFilter
     {
         [DataMember]
         public PovelliLabel[] labels = null;
