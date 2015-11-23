@@ -1,18 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
 using System.IO;
 using System.Security.Cryptography;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
-using System.Net.Http;
 using System.Net;
 
 namespace Povelli
 {
+    /// <summary>
+    /// This library is a wrapper to enable communication between your application and Povelli service.
+    /// 
+    /// --- DO NOT MODIFY THIS FILE ---
+    /// 
+    /// Using this file as-is and unmodified will greately help ease upgrading to future releases provided
+    /// by Povelli team and allows for dropping the new version of this file in place without having to 
+    /// worry about manually merging changes.
+    /// </summary>
+
     [DataContract]
     class PovelliStore
     {

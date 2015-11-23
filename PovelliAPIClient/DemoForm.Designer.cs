@@ -62,11 +62,14 @@
             this.UPCFilter = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.apiResponse = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.labelAssign.SuspendLayout();
             this.labelCheck.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // sendBtn
@@ -81,7 +84,7 @@
             // 
             // privateKey
             // 
-            this.privateKey.Location = new System.Drawing.Point(114, 33);
+            this.privateKey.Location = new System.Drawing.Point(121, 34);
             this.privateKey.Name = "privateKey";
             this.privateKey.Size = new System.Drawing.Size(280, 20);
             this.privateKey.TabIndex = 1;
@@ -90,7 +93,7 @@
             // 
             // publicKey
             // 
-            this.publicKey.Location = new System.Drawing.Point(114, 59);
+            this.publicKey.Location = new System.Drawing.Point(121, 60);
             this.publicKey.Name = "publicKey";
             this.publicKey.Size = new System.Drawing.Size(280, 20);
             this.publicKey.TabIndex = 2;
@@ -99,7 +102,7 @@
             // 
             // storeUID
             // 
-            this.storeUID.Location = new System.Drawing.Point(114, 86);
+            this.storeUID.Location = new System.Drawing.Point(121, 87);
             this.storeUID.Name = "storeUID";
             this.storeUID.Size = new System.Drawing.Size(264, 20);
             this.storeUID.TabIndex = 3;
@@ -133,7 +136,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Location = new System.Drawing.Point(19, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 7;
@@ -142,7 +145,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 62);
+            this.label2.Location = new System.Drawing.Point(19, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 8;
@@ -151,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 89);
+            this.label3.Location = new System.Drawing.Point(19, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 9;
@@ -311,7 +314,7 @@
             this.assignPanelBtn.Name = "assignPanelBtn";
             this.assignPanelBtn.Size = new System.Drawing.Size(109, 23);
             this.assignPanelBtn.TabIndex = 25;
-            this.assignPanelBtn.Text = "Assign Label";
+            this.assignPanelBtn.Text = "Assign to Label";
             this.assignPanelBtn.UseVisualStyleBackColor = true;
             this.assignPanelBtn.Click += new System.EventHandler(this.assignPanelBtn_Click);
             // 
@@ -372,7 +375,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.apiResponse);
-            this.groupBox3.Location = new System.Drawing.Point(15, 351);
+            this.groupBox3.Location = new System.Drawing.Point(15, 328);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(847, 158);
             this.groupBox3.TabIndex = 19;
@@ -381,17 +384,43 @@
             // 
             // apiResponse
             // 
+            this.apiResponse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.apiResponse.Location = new System.Drawing.Point(7, 20);
             this.apiResponse.Multiline = true;
             this.apiResponse.Name = "apiResponse";
+            this.apiResponse.ReadOnly = true;
             this.apiResponse.Size = new System.Drawing.Size(834, 132);
             this.apiResponse.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Location = new System.Drawing.Point(12, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(850, 110);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Store Identification Parameters";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(438, 25);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(402, 79);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Public and private keys identify one or more stores belonging to a particular cus" +
+    "tomer while store UID identifies a specific store belonging to the customer whos" +
+    "e public/private keys belong to.";
             // 
             // DemoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 521);
+            this.ClientSize = new System.Drawing.Size(877, 500);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.size);
@@ -409,6 +438,7 @@
             this.Controls.Add(this.publicKey);
             this.Controls.Add(this.privateKey);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox4);
             this.Name = "DemoForm";
             this.Text = "Povelli API Demo";
             this.groupBox1.ResumeLayout(false);
@@ -420,6 +450,8 @@
             this.labelCheck.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,6 +493,8 @@
         private System.Windows.Forms.TextBox UPCFilter;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox apiResponse;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
